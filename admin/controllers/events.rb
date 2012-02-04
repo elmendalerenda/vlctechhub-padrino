@@ -7,6 +7,7 @@ Admin.controllers :events do
 
   get :new do
     @event = Event.new
+    @event.year = '2012'
     render 'events/new'
   end
 

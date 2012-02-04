@@ -15,7 +15,8 @@ Vlctechhub.controllers :event do
 
     results = Event.where(search_criteria).all
     @results = clean_events(results)
-
+    @results = add_week_day(@results)
+    
     erb :mailchimp
   end
 

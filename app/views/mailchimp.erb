@@ -482,7 +482,7 @@
 
     <% for event in @results %>
 
-	<li><div class="event-list-when"><div class="event-list-day">Jueves</div>
+	<li><div class="event-list-when"><div class="event-list-day"><%= event['wday'] %></div>
 	    <div class="event-list-number" style=""><%= event['date'] %></div>
 	    </div> <div class="event-list-desc"><%= event['name'] %></div></li>
     <% end %>
@@ -508,83 +508,17 @@
     <% for event in @results %>
 
         <tr><td valign="top">
-            <h2><span class="beer h2"><%= event['organizer'] %></span></h2>
-            <div>Betabeers est&aacute; de vuelta este mes con una charla sobre <strong>CodeIgniter</strong> de la mano de Jose Argudo y las presentaciones de <strong>Bisicalc</strong> por C&eacute;sar G&oacute;mez, <strong>Chicisimo</strong> por David Bolufer y <strong>Kaira</strong> por Luis Peris.
-            <a href="http://betabeers.com/c/valencia/" class="more">+</a> </div>
+            <h2><span class="<%= event['icon'] %> h2"><%= event['organizer'] %></span></h2>
+            <div><%= event['description'] %>
+            <a href="<%= event['follow'] %>" class="more">+</a> </div>
 
 
             <div class="info">
-               <div class="when">02/02 - 18:30</div>
-               <div class="where">Parc Cientifiq, <a href="http://maps.google.com/maps?q=catedratico+agustin+escardino,+Paterna,+Espa%C3%B1a&hl=es&ie=UTF8&ll=39.519867,-0.435419&spn=0.03337,0.084543&sll=39.502065,-0.440599&sspn=0.534056,1.352692&vpsrc=0&hq=catedratico+agustin+escardino,&hnear=Paterna,+Valencia,+Comunidad+Valenciana,+Espa%C3%B1a&t=m&z=14&iwloc=A">Catedr&aacute;tico Agust&iacute;n Escardino 9, Paterna</a></div>
+               <div class="when"><%= event['date'] %>/<%= event['month'] %> - <%= event['time'] %></div>
+               <div class="where"><a href="<%= event['location_url'] %>"><%= event['location'] %></a></div>
             </div>
         </td></tr>
     <% end %>
-
-
-
-<tr><td valign="top">
-    <h2><span class="meet h2">GeoInquietos</span></h2>
-    <div>En la 3a reuni&oacute;n de GeoInquietos se presentar&aacute; <strong>TileMill</strong>, mapas bonitos en idioma web por Pedro-Juan Ferrer y <strong>SIG de carreteras</strong>, desarrollos en gvSIG por Miquel Esp&iacute;.
-	<a href="http://geoinquietos-valencia-0212.eventbrite.com/" class="more">+</a> </div>
-
-
-    <div class="info">
-       <div class="when">10/02 - 16:00 - 19:00</div>
-       <div class="where">ETSIGCyT, Edificio 7I, Universidad Polit&eacute;cnica de Valencia</div>
-    </div>
-</td></tr>
-
-<tr><td valign="top">
-    <h2><span class="conf h2">deCharlas</span></h2>
-    <div>Nacho Coloma de Extrema Sistemas estar&aacute; en deCharlas para hablar sobre <strong>HTML5 y CSS3</strong>.
-
-    <a href="http://decharlas.uji.es/" class="more">+</a></div>
-
-    <div class="info">
-	<div class="when">13/02 - hora por confirmar</div>
-	<div class="where">Universidad Jaume I, Castell&oacute;n</div>
-    </div>
-</td></tr>
-
-
-<tr><td valign="top">
-    <h2><span class="meet h2">Agile Levante</span></h2>
-    <div><strong>Historias de branches</strong>. Se hablar&aacute; de la gesti&oacute;n, buenas pr&aacute;cticas y experiencias con ramas en proyectos de equipos &aacute;giles.
-	<a href="http://agilelevante.wordpress.com/" class="more">+</a> </div>
-
-
-    <div class="info">
-       <div class="when">14/02 - 18:30</div>
-       <div class="where">Aureka, <a href="http://maps.google.es/maps?f=q&source=s_q&hl=es&geocode=&q=albalat+de+tarongers+10,+valencia&sll=39.477471,-0.343913&sspn=0.003449,0.008256&layer=t&ie=UTF8&hq=&hnear=Calle+de+Albalat+dels+Tarongers,+10,+46021+Valencia,+Comunidad+Valenciana&z=17&iwloc=A">Albalat de tarongers 10</a></div>
-    </div>
-</td></tr>
-
-
-<tr><td valign="top">
-    <h2><span class="code h2">OpenSource HackNight</span></h2>
-    <div>
-	Next edition of the OpenSource HackNight. At peertransfer valencia office we are big supporters of the open source world, so we thought that it would be cool to sit together and see if we can give something back to the community. We are opening our offices from 19:00 to come and hack together.
-
-    <a href="https://gist.github.com/1363768" class="more">+</a> </div>
-
-    <div class="info">
-        <div class="when">16/02 - 19:00</div>
-        <div class="where">peerTransfer, <span class="vevent"><span class="description"><a href="http://maps.google.es/maps?q=Av+de+Arag%C3%B3n,+30,+46021+Valencia&hl=es&ie=UTF8&ll=39.471798,-0.357506&spn=0.010087,0.01929&sll=39.471931,-0.360317&sspn=0.010087,0.01929&vpsrc=0&hnear=Av+de+Arag%C3%B3n,+30,+46021+Valencia,+Comunidad+Valenciana&t=m&z=16">Edificio Europa Avenida de Aragon, 30, 13-J</a></span></span></div>
-    </div>
-</td></tr>
-
-<tr><td valign="top">
-    <h2><div><span class="meet h2">DrupalVal</span></div></h2>
-    <div>En el mes de febrero tendremos una drupalada de sitebuilding que tratar&aacute; sobre el <strong>m&oacute;dulo Panels</strong>. Es uno de los m&oacute;dulos m&aacute;s usados de Drupal, muy potente para el que no hace falta poseer conocimiento t&eacute;cnico, un buen punto desde el que empezar con Drupal.
-
-    <a href="http://groups.drupal.org/node/205988" class="more">+</a></div>
-
-
-    <div class="info">
-	<div class="when">23/02 - 19:00</div>
-        <div class="where">Bar Bipolar, <a href="http://g.co/maps/ncyxm">Plaza Escuela P&iacute;as</a></div>
-    </div>
-</td></tr>
 
                                                             </table>
                                                             <!-- // End Module: Top Image with Content \\ -->
