@@ -1,44 +1,85 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>VlcTechHub</title>
-    <meta name="description" content="El hub de los eventos tecnológicos de Valencia">
-    <script>
-        CUORE.Dom.ready(function() {
-            var currentLocale = (navigator.language || navigator.browserLanguage);
-            //CUORE.Bus.enableDebug();
-            document.labels = {};
-            document.labels[currentLocale] = {
-                "label.input": "Que dice Twitter acerca de ....",
-                "label.button": "Busca"
-            };
+<head>
+    <meta charset="iso-8859-1">
+    <meta http-equiv="Content-Language" content="es" />
 
-            var year = getQueryVariable('year');
-            var month = getQueryVariable('month');
+    <title>VLC Tech Hub</title>
+		
+<style type="text/css">
+body{
+    margin:auto;
+     font-family: Verdana, 'franklin-gothic-urw',sans-serif;
+}
+#logo{
+    margin-top:120px;
+    width:100%;
+    text-align:center;
+    margin-bottom:50px;
+}
+.line{
+   color:#909090;
+   font-weight: 100;
+   font-height: 1.5;
+   text-align:center;
+   font-size:1.25em;
+}
 
-            document.page = new Home('');
-            document.page.draw();
-        });
-    </script>
+.info{
+   color:#909090;
+   font-weight: 100;
+   font-height: 1.5;
+   text-align:center;
+   font-size:0.75em;
+   margin-top: 60px;
+}
 
-  </title>
-  <body>
-
-    <header>
-        <div id="logo">
-            <img src="/images/title.png"></img>
-        </div>
-        <div class="line">El hub de los eventos tecnológicos de Valencia</div>
-    </header>
-
-    <section id="summary">
-
-    </section>
-
-    <section id="events">
-
-    </section>
+a.btn{
+   background: none repeat scroll 0 0 #212121;
+    color: #FFFFFF;
+    display: inline-block;
+    line-height: 40px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-decoration: none;
+    border-radius: 5px; 
+}
 
 
-  </body>
+.field{
+    padding: 8px;
+    border:1px solid #909090;
+}
+</style>    
+<link rel="shortcut icon" href="http://vlctechhub.org/favicon.ico">
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27446417-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>    
+<body>
+<div id="logo">    
+    <img src="/images/title.png"></img>
+</div>
+<div class="line">El hub de los eventos tecnológicos de Valencia</div>
+<div class="newsletter" style="margin-top:50px; text-align:center">
+    
+<a href="http://eepurl.com/hp84w" class="btn">Subscríbete a la newsletter</a>    
+</div>
+<div class="info">
+Newsletters pasadas: <a href="http://eepurl.com/hvmZw">diciembre</a>,<a href="http://t.co/IbtDU50E">enero</a><br><br>
+
+Si quieres aparecer en la newsletter o mandarnos tus dudas, escribe a <a href="mailto:info@vlctechhub.org">info@vlctechhub.org</a>
+</div>
+
+</body>    
 </html>
