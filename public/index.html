@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VlcTechHub</title>
+    <meta name="description" content="El hub de los eventos tecnológicos de Valencia">
+    <script>
+        CUORE.Dom.ready(function() {
+            var currentLocale = (navigator.language || navigator.browserLanguage);
+            //CUORE.Bus.enableDebug();
+            document.labels = {};
+            document.labels[currentLocale] = {
+                "label.input": "Que dice Twitter acerca de ....",
+                "label.button": "Busca"
+            };
+
+            var year = getQueryVariable('year');
+            var month = getQueryVariable('month');
+
+            document.page = new Home('');
+            document.page.draw();
+        });
+    </script>
+
+  </title>
+  <body>
+
+    <header>
+        <div id="logo">
+            <img src="/images/title.png"></img>
+        </div>
+        <div class="line">El hub de los eventos tecnológicos de Valencia</div>
+    </header>
+
+    <section id="summary">
+
+    </section>
+
+    <section id="events">
+
+    </section>
+
+
+  </body>
+</html>

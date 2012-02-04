@@ -1,0 +1,82 @@
+.group
+  =f.label :_type
+  =f.error_message_on :_type
+  =f.text_field :_type, :class => :text_field
+  %span.description Ex: a simple text
+
+.group
+  =f.label :_id
+  =f.error_message_on :_id
+  =f.text_field :_id, :class => :text_field
+  %span.description Ex: a simple text
+
+.group
+  =f.label :date
+  =f.error_message_on :date
+  =f.text_field :date, :class => :text_field
+  %span.description Ex: a simple text
+
+.group
+  =f.label :month
+  =f.error_message_on :month
+  =f.text_field :month, :class => :text_field
+  %span.description Ex: a simple text
+
+.group
+  =f.label :year
+  =f.error_message_on :year
+  =f.text_field :year, :class => :text_field
+  %span.description Ex: a simple text
+
+.group
+  =f.label :time
+  =f.error_message_on :time
+  =f.text_field :time, :class => :text_field
+  %span.description Ex: a simple text
+
+.group
+  =f.label :name
+  =f.error_message_on :name
+  =f.text_field :name, :class => :text_field
+  %span.description Ex: a simple text
+
+.group
+  =f.label :organizer
+  =f.error_message_on :organizer
+  =f.text_field :organizer, :class => :text_field
+  %span.description Ex: a simple text
+
+.group
+  =f.label :description
+  =f.error_message_on :description
+  =f.text_field :description, :class => :text_field
+  %span.description Ex: a simple text
+
+.group
+  =f.label :icon
+  =f.error_message_on :icon
+  =f.text_field :icon, :class => :text_field
+  %span.description Ex: a simple text
+
+.group
+  =f.label :location
+  =f.error_message_on :location
+  =f.text_field :location, :class => :text_field
+  %span.description Ex: a simple text
+
+.group
+  =f.label :location_url
+  =f.error_message_on :location_url
+  =f.text_field :location_url, :class => :text_field
+  %span.description Ex: a simple text
+
+.group
+  =f.label :follow
+  =f.error_message_on :follow
+  =f.text_field :follow, :class => :text_field
+  %span.description Ex: a simple text
+
+
+.group.navform.wat-cf
+  =f.submit pat(:save), :class => :button
+  =f.submit pat(:cancel), :onclick => "window.location='#{url(:events, :index)}';return false", :class => :button
